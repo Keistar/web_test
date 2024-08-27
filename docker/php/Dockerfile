@@ -21,3 +21,5 @@ ENV PATH $PATH:/composer/vendor/bin
 WORKDIR /var/www
 
 RUN composer global require "laravel/installer"
+
+RUN composer create-project --prefer-dist laravel/laravel test_p
