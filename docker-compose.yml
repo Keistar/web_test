@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: app
+    container_name: laravel_app
     build: ./docker/php
     volumes:
       - .:/var/www
@@ -8,7 +8,7 @@ services:
       - db
   nginx:
     image: nginx
-    container_name: nginx
+    container_name: laravel_nginx
     ports:
       - 8000:80
     volumes:
@@ -20,7 +20,7 @@ services:
   db:
     image: mysql:latest
     restart: always
-    container_name: db
+    container_name: laravel_db
     ports:
       - 3306:3306
     volumes:

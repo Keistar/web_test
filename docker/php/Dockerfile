@@ -22,4 +22,4 @@ WORKDIR /var/www
 
 RUN composer global require "laravel/installer"
 
-RUN composer create-project --prefer-dist laravel/laravel test_p
+RUN composer create-project --prefer-dist laravel/laravel laravel
